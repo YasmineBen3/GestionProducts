@@ -1,0 +1,84 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+a.button {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+}
+
+a.button:hover {
+    background-color: #0056b3;
+}
+
+.button{
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.button:hover{
+    background-color:#0056b3;
+}
+
+.button-edit{
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #03661c;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.button-edit:hover{
+    background-color: #024112;
+}
+
+.button-supp{
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #ca0b0b;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.button-supp:hover{
+    background-color: #810505;
+}
+
+.button-detail{
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #dde00e;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.button-detail:hover{
+    background-color: #bdc004;
+}

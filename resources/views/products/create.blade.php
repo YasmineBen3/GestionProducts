@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Create New Product')
+@section('Product', 'Create New Product')
 
 @section('content')
     <div class="container">
@@ -18,28 +18,31 @@
 
         <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            <table>
+                <tr>
+                    <td><label for="libelle">Libelle:</label></td>
+                    <td><input type="text" name="libelle" placeholder="libelle" value="{{ old('libelle') }}" required></td>
+                </tr>
+                <tr>
+                
+                <td><label for="marque">Marque:</label></td>
+                <td><input type="text" name="marque" placeholder="marque" value="{{ old('marque') }}" required></td>
+                </tr>
+                <tr>
+                <td><label for="prix">Prix:</label></td>
+                <td><input type="text" name="prix" placeholder="prix" value="{{ old('prix') }}" required></td>
+                </tr>
+                <tr>
+                <td><label for="stock">Stock:</label></td>
+                <td><input type="number" name="stock" placeholder="stock" value="{{ old('stock') }}" required min="1" max="9999"></td>
+                </tr>
+                <tr>
+                <td><label for="image">Image (optional):</label></td>
+                <td><input type="file" name="image" placeholder="image"></td>
+                </tr>
+            </table>
 
-            <label for="libelle">Libelle:</label>
-            <input type="text" name="libelle" value="{{ old('libelle') }}" required>
-            <br>
-
-            <label for="marque">Marque:</label>
-            <input type="text" name="marque" value="{{ old('marque') }}" required>
-            <br>
-
-            <label for="prix">Prix:</label>
-            <input type="text" name="prix" value="{{ old('prix') }}" required>
-            <br>
-
-            <label for="stock">Stock:</label>
-            <input type="number" name="stock" value="{{ old('stock') }}" required min="1" max="9999">
-            <br>
-
-            <label for="image">Image (optional):</label>
-            <input type="file" name="image">
-            <br>
-
-            <button type="submit">Create Product</button>
+            <button type="submit" class="button" >Create Product</button>
         </form>
     </div>
 @endsection
